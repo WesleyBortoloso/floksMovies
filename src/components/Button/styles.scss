@@ -1,0 +1,14 @@
+.button-component {
+  color: #e0782a;
+  background-color: #FFF;
+  padding: 0.75rem;
+  border: unset;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: ease-in 0.5s;
+  cursor: pointer;
+}
+
+button:hover {
+  color: red;
+}
