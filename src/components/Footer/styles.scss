@@ -1,0 +1,45 @@
+.footer-rights {
+  background: white;
+  height: 15vh;
+  display: grid;
+  grid: 12.5rem / 33% 33% 33%;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+
+  p {
+    color: #e2823a;
+    font-weight: bold;
+    font-size: 0.875em;
+
+    @media screen and (max-width: 800px) {
+      font-size: 0.625em;
+    }
+  }
+
+  img {
+    max-width: 6.25rem;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 1.25rem;
+
+    a {
+      color: #e2823a;
+
+      svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    gap: 1rem;
+    height: unset;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
