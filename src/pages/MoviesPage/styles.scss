@@ -1,0 +1,110 @@
+body {
+  background-color: #e0782a;
+}
+
+.movies-page {
+  padding-top: 4.375rem;
+  height: auto;
+
+  .not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.75rem;
+    padding: 1.75rem;
+
+    @media screen and (max-width: 800px) {
+      gap: 1.875rem;
+    }
+
+    img {
+      max-width: 18.75rem;
+      margin-bottom: 5rem;
+
+      @media screen and (max-width: 800px) {
+        max-width: 12.5rem;
+      }
+    }
+
+    .notfound-title {
+      color: white;
+      text-align: center;
+
+      @media screen and (max-width: 800px) {
+        font-size: 1.6em;
+      }
+    }
+
+
+  }
+}
+
+.movies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6.25rem;
+
+  @media screen and (max-width: 800px) {
+    padding: 0 1.2rem;
+  }
+}
+
+.movies-title {
+  color: white;
+  text-align: center;
+
+  @media screen and (max-width: 800px) {
+    font-size: 1.4em;
+  }
+}
+
+.movies-filter {
+  display: flex;
+  margin: 2.5rem 0;
+  justify-content: space-evenly;
+
+  button {
+    background-color: #e2823a;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1.125rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.37);
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  button:hover {
+    transform: translateY(-4px);
+  }
+
+  @media screen and (max-width: 800px) {
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+}
+
+.movies-footer {
+  margin-top: 2.5rem;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  h4 {
+    color: white;
+  }
+
+  button {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    color: #e2823a;
+    text-align: center;
+  }
+}
