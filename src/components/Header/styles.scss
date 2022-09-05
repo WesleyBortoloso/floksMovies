@@ -1,0 +1,31 @@
+header {
+  height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-block: 0.625rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.37);
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  backdrop-filter: blur(10px);
+
+  @media screen and (max-width: 800px) {
+    justify-content: center;
+  }
+
+  img {
+    max-width: 6.25rem;
+
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  .nav-search {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+}
