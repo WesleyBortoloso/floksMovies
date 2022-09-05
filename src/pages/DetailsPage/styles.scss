@@ -1,0 +1,83 @@
+.page-details {
+  padding-top: 2.5rem;
+
+  .movie-title {
+    display: flex;
+    margin-bottom: 1.25rem;
+    justify-content: center;
+
+    h1 {
+      color: white;
+      font-size: 1.75em;
+      border-bottom: 1px solid white;
+      padding-bottom: 0.625rem;
+    }
+  }
+
+  .details-section {
+    background-color: rgba(213, 211, 211, 0.437);
+    box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.37);
+    display: grid;
+    grid: 400px / 50% 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .movie-details {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .movie-tagline {
+        color: white;
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      .movie-description {
+        color: white;
+        margin: 0 3.75rem;
+      }
+
+      .movie-rate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: yellow;
+      }
+
+      .movie-release {
+        color: white;
+        align-self: flex-end;
+        margin-right: 0.625rem;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.trend-section {
+  margin: 8.75rem 0;
+
+  .trend-movies {
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+
+  .trend-title {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3.75rem;
+  }
+}
