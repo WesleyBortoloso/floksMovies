@@ -16,12 +16,26 @@ export default function DetailsPage() {
   const movieId = params.id
   const Movie_API = `https://api.themoviedb.org/3/movie/${movieId}`;
   const Trending_API = `https://api.themoviedb.org/3/trending/movie/day`;
+  const Provider_API = `https://api.themoviedb.org/3/movie/${movieId}/watch/providers`;
   const api_key = "7cfc85516ca2247cf6e74cb94dc31857";
 
   const [isLoading, setIsLoading] = useState(false);
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [movie, setMovie] = useState([]);
-  const trendMovies = trendingMovies.slice(0, 3)
+  const [movieProvider, setMovieProvider] = useState([]);
+  const trendMovies = trendingMovies.slice(0, 3);
+
+  useEffect(() => {
+    axios.get(Provider_API, {
+      params: {
+        api_key,
+        language: "pt-BR"
+      }
+    })
+      .then(res => {
+        setMovieProvider(res.data.results['AD'].flatrate[0]);
+      });
+  }, [Provider_API]);
 
   useEffect(() => {
     setIsLoading(true)
@@ -55,6 +69,7 @@ export default function DetailsPage() {
       <section className="page-details">
         <div className="movie-title">
           <h1>{movie.title}</h1>
+          <img src={`https://image.tmdb.org/t/p/w1280${movieProvider.logo_path}`} alt="" className="provider-logo" />
         </div>
         <section className="details-section">
           <img src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}
